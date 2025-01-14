@@ -8,7 +8,7 @@
 - For object generation in pygame: https://www.techwithtim.net/tutorials/game-development-with-python/side-scroller-pygame/random-object-generation
 
 ## Assets
-https://wallpaperaccess.com/pixel-laptop
+https://wallpaperaccess.com/pixel-art
 https://pixelartmaker.com/art/26fcf6eb955ecaf
 
   

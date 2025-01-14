@@ -34,7 +34,8 @@ class pipe(object):
     def draw(self, screen):
         self.hitbox = (self.x + 10, self.y + 5, self.width - 20, self.height - 5)
         pygame.draw.rect(screen, (255,0,0), self.hitbox, 2)
-        screen.blit(pygame.transform.scale(self.pipeImg, (128, 128)), (self.x, self.y))
+        #screen.blit(pygame.transform.scale(self.pipeImg, (128, random.randrange(250, 500))), (self.x, self.y))
+        screen.blit(pygame.transform.scale(self.pipeImg, (self.width, self.height)), (self.x, self.y))
 
 pipes = []
 
@@ -64,8 +65,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         
-        if event.type == newPipe: 
-            pipes.append(pipe(810, 592, 128, 128))
+        if event.type == newPipe:
+            height = random.randrange(200, 500)
+            dist_from_top = 720 - height
+            pipes.append(pipe(810, dist_from_top, 128, height))
  
     # Redraw the window and change the position of  the background for the next iteration
     redrawWindow()
